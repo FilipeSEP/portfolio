@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Filipe Gabriel</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <button class="menu-mobile" aria-label="Abrir menu" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#habilidades" class="menu-link">Habilidades</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <div class="cabecalho-conteudo">
+            <img src="https://filipesep.github.io/portifolio/img/eu.jpg"
+                alt="Filipe Gabriel, retrato profissional com expressão confiante e acessível" class="foto-perfil">
+            <h1>Filipe Gabriel</h1>
+            <p class="cabecalho-sub-titulo">Desenvolvedor Full Stack</p>
+
+            <!-- Botão Download CV -->
+            <a href="caminho/do/seu/curriculo.pdf" download class="botao-cv">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Meu nome é Filipe Gabriel, tenho 21 anos e sou desenvolvedor full stack. Atuo com
+                tecnologias como HTML, CSS, JavaScript, React, Node.js e Java. Minha paixão é criar soluções inovadoras
+                e eficientes para problemas reais.</p>
+        </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="habilidades">
+        <h2 class="habilidades-titulo">Minhas Habilidades</h2>
+        <div class="habilidades-caixa">
+
+            <div class="habilidade-card">
+                <i class="fab fa-html5 habilidade-icone" style="color: #e34f26;"></i>
+                <h3 class="habilidade-nome">HTML5</h3>
+                <div class="habilidade-bar">
+                    <div class="habilidade-nivel" style="width: 90%"></div>
+                </div>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-css3-alt habilidade-icone" style="color: #1572b6;"></i>
+                <h3 class="habilidade-nome">CSS3</h3>
+                <div class="habilidade-bar">
+                    <div class="habilidade-nivel" style="width: 85%"></div>
+                </div>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-js habilidade-icone" style="color: #f7df1e;"></i>
+                <h3 class="habilidade-nome">JavaScript</h3>
+                <div class="habilidade-bar">
+                    <div class="habilidade-nivel" style="width: 80%"></div>
+                </div>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-react habilidade-icone" style="color: #61dafb;"></i>
+                <h3 class="habilidade-nome">React</h3>
+                <div class="habilidade-bar">
+                    <div class="habilidade-nivel" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-node habilidade-icone" style="color: #339933;"></i>
+                <h3 class="habilidade-nome">Node.js</h3>
+                <div class="habilidade-bar">
+                    <div class="habilidade-nivel" style="width: 70%"></div>
+                </div>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-java habilidade-icone" style="color: #007396;"></i>
+                <h3 class="habilidade-nome">Java</h3>
+                <div class="habilidade-bar">
+                    <div class="habilidade-nivel" style="width: 65%"></div>
+                </div>
+            </div>
+
+            <div class="habilidade-card">
+                <i class="fab fa-git-alt habilidade-icone" style="color: #f05032;"></i>
+                <h3 class="habilidade-nome">Git</h3>
+                <div class="habilidade-bar">
+                    <div class="habilidade-nivel" style="width: 85%"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <!-- Projeto 1 - E-commerce Petshop -->
+            <a href="https://filipesep.github.io/UNI-Pets/" target="_blank" class="projetos-card-link">
+                <div class="projetos-card">
+                    <img src="https://filipesep.github.io/portifolio/img/unipets.png"
+                        alt="Projeto E-commerce de Petshop" class="projetos-imagem">
+                    <div class="caixa-texto-projetos">
+                        <h3 class="info-projetos">E-commerce de Petshop</h3>
+                        <p class="paragrafo-projetos">E-commerce moderno com animações e design responsivo</p>
+                        <div class="projetos-techs">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Projeto 2 - Landing Page Cardápio -->
+            <a href="https://filipesep.github.io/cardapio/" target="_blank" class="projetos-card-link">
+                <div class="projetos-card">
+                    <img src="https://filipesep.github.io/portifolio/img/cardapio.png"
+                        alt="Landing Page de Cardápio Digital" class="projetos-imagem">
+                    <div class="caixa-texto-projetos">
+                        <h3 class="info-projetos">Cardápio Digital</h3>
+                        <p class="paragrafo-projetos">Landing page interativa para restaurante com cardápio dinâmico e
+                            design responsivo</p>
+                        <div class="projetos-techs">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://filipesep.github.io/temporal/" target="_blank" class="projetos-card-link">
+                <div class="projetos-card">
+                    <img src="https://filipesep.github.io/portifolio/img/temporal.png"
+                        alt="Landing Page de Cardápio Digital" class="projetos-imagem">
+                    <div class="caixa-texto-projetos">
+                        <h3 class="info-projetos">Previsão do Tempo</h3>
+                        <p class="paragrafo-projetos">Aplicação web para visualização da previsão do tempo em diferentes
+                            localidades</p>
+                        <div class="projetos-techs">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="contato" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div>
+                <label for="nome" class="label-hidden">Nome</label>
+                <input type="text" placeholder="Seu nome" class="campo-form" id="nome" required>
+            </div>
+            <div class="grupo-form">
+                <label for="mensagem" class="label-hidden">Mensagem</label>
+                <textarea class="campo-form" placeholder="Sua mensagem" rows="6" id="mensagem" required></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- Rodapé com redes sociais -->
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="redes-sociais-rodape">
+                <a href="https://github.com/filipesep" target="_blank" class="rede-social-rodape" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/filipe-viana-dev" target="_blank" class="rede-social-rodape"
+                    title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+            <p class="rodape-copyright">
+                <i class="far fa-copyright"></i> 2026 Filipe Gabriel. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+            const telefone = '5511963915049';
+
+            if (!nome || !mensagem) {
+                alert('Por favor, preencha seu nome e mensagem');
+                return;
+            }
+
+            const texto = `${nome}: ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+            const url = `https://wa.me/${telefone}/?text=${msgFormatada}`;
+
+            window.open(url, '_blank');
+
+            document.getElementById('nome').value = '';
+            document.getElementById('mensagem').value = '';
+        }
+
+        // Menu mobile
+        const menuMobile = document.querySelector('.menu-mobile');
+        const menu = document.querySelector('.menu');
+
+        if (menuMobile) {
+            menuMobile.addEventListener('click', () => {
+                menu.classList.toggle('ativo');
+                const expanded = menu.classList.contains('ativo');
+                menuMobile.setAttribute('aria-expanded', expanded);
+
+                const hamburger = document.querySelector('.hamburger');
+                hamburger.classList.toggle('ativo');
+            });
+        }
+
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('ativo');
+                menuMobile.setAttribute('aria-expanded', false);
+                document.querySelector('.hamburger').classList.remove('ativo');
+            });
+        });
+
+        // Atualizar ano automaticamente
+        const ano = new Date().getFullYear();
+        document.querySelector('.rodape-copyright').innerHTML =
+            `<i class="far fa-copyright"></i> ${ano} Filipe Gabriel. Todos os direitos reservados.`;
+    </script>
+</body>
+
+</html>
