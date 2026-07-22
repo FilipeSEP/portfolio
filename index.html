@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filipe Gabriel — Desenvolvedor Full Stack</title>
+<meta name="description" content="Portfólio de Filipe Gabriel, desenvolvedor Full Stack especializado em Java, Spring Boot, React e JavaScript.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<div class="content">
+
+<header>
+  <div class="nav-wrap">
+    <div class="logo">FILIPE<span>.DEV</span></div>
+    <input type="checkbox" id="menu-toggle">
+    <label class="burger" for="menu-toggle">MENU</label>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#habilidades" class="nav-link">Skills</a></li>
+        <li><a href="#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="gameboy">
+      <div class="gb-screen">
+        <div class="gb-screen-inner">
+          <img src="img/eu.jpg" alt="Filipe Gabriel, desenvolvedor Full Stack">
+        </div>
+      </div>
+      <div class="gb-row">
+        <span class="gb-brand">FULLSTACK™</span>
+        <span class="gb-led"></span>
+      </div>
+      <div class="gb-row">
+        <div class="gb-dpad"></div>
+        <div class="gb-btns"><span></span><span></span></div>
+      </div>
+    </div>
+
+    <h1>FILIPE GABRIEL</h1>
+    <div class="role" id="typed-role">Desenvolvedor Full Stack</div>
+
+    <a href="#sobre" class="press-start">PRESS START ▸</a>
+  </section>
+
+  <section id="sobre">
+    <p class="eyebrow">FICHA DO JOGADOR</p>
+    <div class="panel pixel-border sobre-grid">
+      <div class="terminal-line">whoami</div>
+      <p style="color:var(--star);margin-bottom:1.4rem;">
+        Meu nome é Filipe Gabriel, tenho 21 anos e sou desenvolvedor full stack.
+        Atuo com HTML, CSS, JavaScript, React, Node.js e Java, sempre em busca de
+        soluções eficientes para problemas reais — com a mesma atenção a detalhe
+        que um bom jogo pede na sua fase mais difícil.
+      </p>
+      <div class="terminal-line">cat objetivo.txt</div>
+      <p style="color:var(--star);margin-bottom:1.6rem;">
+        Construir produtos web sólidos, bonitos e que rodem sem travar — do
+        front ao back.
+      </p>
+      <a href="curriculo-filipe-viana.pdf" class="press-start" style="font-size:.6rem;">⬇ DOWNLOAD CV</a>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <p class="eyebrow">INVENTÁRIO DE HABILIDADES</p>
+    <div class="cart-grid">
+      <div class="cart"><div class="cart-top"><span class="cart-name">HTML5</span><span class="cart-lv">LV 95</span></div><div class="xp-bar"><div class="xp-fill" style="width:95%"></div></div></div>
+      <div class="cart"><div class="cart-top"><span class="cart-name">CSS3</span><span class="cart-lv">LV 90</span></div><div class="xp-bar"><div class="xp-fill" style="width:90%"></div></div></div>
+      <div class="cart"><div class="cart-top"><span class="cart-name">JAVASCRIPT</span><span class="cart-lv">LV 88</span></div><div class="xp-bar"><div class="xp-fill" style="width:88%"></div></div></div>
+      <div class="cart"><div class="cart-top"><span class="cart-name">REACT</span><span class="cart-lv">LV 82</span></div><div class="xp-bar"><div class="xp-fill" style="width:82%"></div></div></div>
+      <div class="cart"><div class="cart-top"><span class="cart-name">NODE.JS</span><span class="cart-lv">LV 78</span></div><div class="xp-bar"><div class="xp-fill" style="width:78%"></div></div></div>
+      <div class="cart"><div class="cart-top"><span class="cart-name">JAVA</span><span class="cart-lv">LV 85</span></div><div class="xp-bar"><div class="xp-fill" style="width:85%"></div></div></div>
+      <div class="cart"><div class="cart-top"><span class="cart-name">GIT</span><span class="cart-lv">LV 90</span></div><div class="xp-bar"><div class="xp-fill" style="width:90%"></div></div></div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <p class="eyebrow">SELECIONE SEU JOGO</p>
+    <div class="game-grid">
+
+      <div class="game-card">
+        <div class="game-cover">🐾</div>
+        <div class="game-body">
+          <h3>E-COMMERCE PETSHOP</h3>
+          <p>E-commerce moderno com animações e design responsivo.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Java</span></div>
+          <a class="play-link" href="https://filipesep.github.io/UNI-Pets/" target="_blank" rel="noopener">INSERT CARTRIDGE ▸ JOGAR</a>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-cover">🍽️</div>
+        <div class="game-body">
+          <h3>CARDÁPIO DIGITAL</h3>
+          <p>Landing page interativa para restaurante com cardápio dinâmico e responsivo.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          <a class="play-link" href="https://filipesep.github.io/cardapio/" target="_blank" rel="noopener">INSERT CARTRIDGE ▸ JOGAR</a>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-cover">🌦️</div>
+        <div class="game-body">
+          <h3>PREVISÃO DO TEMPO</h3>
+          <p>Aplicação web para visualização da previsão do tempo em diferentes localidades.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          <a class="play-link" href="https://filipesep.github.io/temporal/" target="_blank" rel="noopener">INSERT CARTRIDGE ▸ JOGAR</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contato">
+    <p class="eyebrow">TRANSMISSÃO / CONTATO</p>
+    <div class="panel pixel-border contact-grid">
+      <form id="contact-form">
+        <div class="field">
+          <label for="name">NOME</label>
+          <input type="text" id="name" name="name" placeholder="Seu nome" required>
+        </div>
+        <div class="field">
+          <label for="message">MENSAGEM</label>
+          <textarea id="message" name="message" rows="4" placeholder="Sua mensagem" required></textarea>
+        </div>
+        <button type="submit" class="press-start" style="font-size:.6rem;">ENVIAR WHATSAPP ▸</button>
+      </form>
+
+      <div class="socials">
+        <a class="social-btn" href="https://github.com/filipesep" target="_blank" rel="noopener">GitHub</a>
+        <a class="social-btn" href="https://www.linkedin.com/in/filipe-viana-dev" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="blink-star">✦</span> Filipe Gabriel. Todos os direitos reservados.
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
