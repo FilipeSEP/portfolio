@@ -245,7 +245,10 @@
 
   /* ---------- projects ---------- */
   /* abas de categoria */
-  .proj-tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.6rem;}
+  .proj-tabs{display:flex;justify-content:space-between;gap:.6rem;margin-bottom:1.6rem;}
+  @media (max-width:640px){
+    .proj-tab{flex:1;padding:.9em .4em;font-size:.5rem;}
+  }
   .proj-tab{
     font-family:var(--font-pixel);
     font-size:.6rem;
