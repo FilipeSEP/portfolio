@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="https://filipesep.github.io/portfolio/img/favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -40,7 +40,7 @@
     <div class="gameboy">
       <div class="gb-screen">
         <div class="gb-screen-inner">
-          <img src="https://filipesep.github.io/portfolio/img/giphy.gif" alt="Animação de tela de jogo retrô">
+          <img src="img/seu-gif.gif" alt="Animação de tela de jogo retrô">
         </div>
       </div>
       <div class="gb-row">
@@ -93,10 +93,46 @@
 
   <section id="projetos">
     <p class="eyebrow">SELECIONE SEU JOGO</p>
-    <div class="game-grid">
 
+    <div class="proj-tabs" role="tablist" aria-label="Categorias de projetos">
+      <button class="proj-tab" role="tab" data-cat="dados" aria-selected="false">DADOS</button>
+      <button class="proj-tab" role="tab" data-cat="backend" aria-selected="false">BACK END</button>
+      <button class="proj-tab active" role="tab" data-cat="fullstack" aria-selected="true">FULL STACK</button>
+    </div>
+
+    <div class="carousel">
+      <button class="car-btn" id="car-prev" aria-label="Projeto anterior">◀</button>
+
+      <div class="proj-panel" id="panel-dados" role="tabpanel">
+        <div class="car-track">
+      <div class="game-card soon">
+        <div class="game-cover"><span class="soon-icon">?</span></div>
+        <div class="game-body">
+          <h3>EM BREVE</h3>
+          <p>Novos projetos de dados chegando por aqui. Fase em construção.</p>
+          <div class="tags"><span class="tag">LOADING...</span></div>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <div class="proj-panel" id="panel-backend" role="tabpanel">
+        <div class="car-track">
+      <div class="game-card soon">
+        <div class="game-cover"><span class="soon-icon">?</span></div>
+        <div class="game-body">
+          <h3>EM BREVE</h3>
+          <p>Novos projetos de back end chegando por aqui. Fase em construção.</p>
+          <div class="tags"><span class="tag">LOADING...</span></div>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <div class="proj-panel active" id="panel-fullstack" role="tabpanel">
+        <div class="car-track">
       <div class="game-card">
-        <div class="game-cover"><img src="https://filipesep.github.io/portfolio/img/unipets.png" alt="Captura de tela do projeto E-commerce Petshop" loading="lazy"></div>
+        <div class="game-cover"><img src="img/petshop.png" alt="Captura de tela do projeto E-commerce Petshop" loading="lazy"></div>
         <div class="game-body">
           <h3>E-COMMERCE PETSHOP</h3>
           <p>E-commerce moderno com animações e design responsivo.</p>
@@ -104,9 +140,8 @@
           <a class="play-link" href="https://filipesep.github.io/UNI-Pets/" target="_blank" rel="noopener">INSERT CARTRIDGE ▸ JOGAR</a>
         </div>
       </div>
-
       <div class="game-card">
-        <div class="game-cover"><img src="https://filipesep.github.io/portfolio/img/cardapio.png" alt="Captura de tela do projeto Cardápio Digital" loading="lazy"></div>
+        <div class="game-cover"><img src="img/cardapio.png" alt="Captura de tela do projeto Cardápio Digital" loading="lazy"></div>
         <div class="game-body">
           <h3>CARDÁPIO DIGITAL</h3>
           <p>Landing page interativa para restaurante com cardápio dinâmico e responsivo.</p>
@@ -114,9 +149,8 @@
           <a class="play-link" href="https://filipesep.github.io/cardapio/" target="_blank" rel="noopener">INSERT CARTRIDGE ▸ JOGAR</a>
         </div>
       </div>
-
       <div class="game-card">
-        <div class="game-cover"><img src="https://filipesep.github.io/portfolio/img/temporal.png" alt="Captura de tela do projeto Previsão do Tempo" loading="lazy"></div>
+        <div class="game-cover"><img src="img/tempo.png" alt="Captura de tela do projeto Previsão do Tempo" loading="lazy"></div>
         <div class="game-body">
           <h3>PREVISÃO DO TEMPO</h3>
           <p>Aplicação web para visualização da previsão do tempo em diferentes localidades.</p>
@@ -124,7 +158,10 @@
           <a class="play-link" href="https://filipesep.github.io/temporal/" target="_blank" rel="noopener">INSERT CARTRIDGE ▸ JOGAR</a>
         </div>
       </div>
+        </div>
+      </div>
 
+      <button class="car-btn" id="car-next" aria-label="Próximo projeto">▶</button>
     </div>
   </section>
 
