@@ -244,11 +244,70 @@
   .xp-fill{height:100%;background:repeating-linear-gradient(90deg,var(--gb) 0 6px, var(--gb-dim) 6px 8px);}
 
   /* ---------- projects ---------- */
-  .game-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:1.8rem;
+  /* abas de categoria */
+  .proj-tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.6rem;}
+  .proj-tab{
+    font-family:var(--font-pixel);
+    font-size:.6rem;
+    color:var(--star-dim);
+    background:var(--panel);
+    border:2px solid var(--panel-border);
+    padding:.9em 1.3em;
+    cursor:pointer;
+    transition:all .12s steps(2);
   }
+  .proj-tab:hover{color:var(--gb);border-color:var(--gb-dim);}
+  .proj-tab.active{
+    color:var(--void-deep);
+    background:var(--gb);
+    border-color:var(--gb);
+    box-shadow:3px 3px 0 var(--gb-dim);
+  }
+
+  /* carrossel */
+  .carousel{position:relative;display:flex;align-items:center;gap:.8rem;}
+  .proj-panel{display:none;flex:1;min-width:0;}
+  .proj-panel.active{display:block;}
+  .car-track{
+    display:flex;
+    gap:1.6rem;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    padding:8px 8px 14px;
+    scrollbar-width:none;
+  }
+  .car-track::-webkit-scrollbar{display:none;}
+  .car-track .game-card{
+    flex:0 0 min(320px,82%);
+    scroll-snap-align:start;
+  }
+  .car-btn{
+    flex:0 0 auto;
+    font-family:var(--font-pixel);
+    font-size:.7rem;
+    color:var(--gb);
+    background:var(--panel);
+    border:2px solid var(--panel-border);
+    width:42px;height:42px;
+    cursor:pointer;
+    box-shadow:3px 3px 0 var(--void-deep);
+    transition:transform .1s steps(2);
+  }
+  .car-btn:hover:not(:disabled){border-color:var(--gb);transform:translate(1px,1px);}
+  .car-btn:disabled{opacity:.3;cursor:default;}
+  @media (max-width:640px){
+    .car-btn{position:absolute;z-index:2;top:35%;width:34px;height:34px;background:rgba(10,14,23,.85);}
+    #car-prev{left:-4px;}
+    #car-next{right:-4px;}
+  }
+
+  .game-card.soon .game-cover{font-family:var(--font-pixel);}
+  .soon-icon{
+    font-size:2.4rem;color:var(--gb-dim);
+    animation:blink 1.2s steps(1) infinite;
+  }
+
   .game-card{
     background:var(--panel);
     display:flex;flex-direction:column;
