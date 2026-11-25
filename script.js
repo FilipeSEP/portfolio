@@ -73,3 +73,45 @@ document.getElementById('contact-form').addEventListener('submit', function(e){
   const text = encodeURIComponent(`Olá, meu nome é ${name}.\n${message}`);
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
 });
+
+// ---------- projetos: abas + carrossel ----------
+(function(){
+  const tabs = document.querySelectorAll('.proj-tab');
+  const panels = document.querySelectorAll('.proj-panel');
+  const prev = document.getElementById('car-prev');
+  const next = document.getElementById('car-next');
+  if(!tabs.length || !prev || !next) return;
+
+  const activeTrack = () => document.querySelector('.proj-panel.active .car-track');
+
+  function step(){
+    const track = activeTrack();
+    const card = track.querySelector('.game-card');
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function updateButtons(){
+    const t = activeTrack();
+    if(!t) return;
+    prev.disabled = t.scrollLeft <= 4;
+    next.disabled = t.scrollLeft + t.clientWidth >= t.scrollWidth - 4;
+  }
+
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+    panels.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected','true');
+    document.getElementById('panel-' + tab.dataset.cat).classList.add('active');
+    activeTrack().scrollLeft = 0;
+    updateButtons();
+  }));
+
+  prev.addEventListener('click', () => activeTrack().scrollBy({left:-step(), behavior:'smooth'}));
+  next.addEventListener('click', () => activeTrack().scrollBy({left: step(), behavior:'smooth'}));
+
+  document.querySelectorAll('.car-track').forEach(t => t.addEventListener('scroll', updateButtons, {passive:true}));
+  window.addEventListener('resize', updateButtons);
+  updateButtons();
+})();
