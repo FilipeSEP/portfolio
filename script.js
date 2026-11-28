@@ -6,8 +6,8 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 
 function resize(){
   canvas.width = window.innerWidth;
-  canvas.height = document.documentElement.scrollHeight;
-  const count = Math.floor((canvas.width * canvas.height) / 9000);
+  canvas.height = window.innerHeight;
+  const count = Math.min(300, Math.floor((canvas.width * canvas.height) / 9000));
   stars = Array.from({length: count}, () => ({
     x: Math.random()*canvas.width,
     y: Math.random()*canvas.height,
@@ -39,7 +39,7 @@ function draw(t){
   if(!reduceMotion) requestAnimationFrame(draw);
 }
 
-window.addEventListener('resize', resize);
+window.addEventListener('resize', () => { resize(); if (reduceMotion) draw(0); });
 resize();
 draw(0);
 
@@ -57,61 +57,44 @@ const observer = new IntersectionObserver((entries)=>{
 },{rootMargin:'-40% 0px -50% 0px'});
 sections.forEach(s=> s.id && observer.observe(s));
 
-// close mobile menu on link click
-navLinks.forEach(l => l.addEventListener('click', ()=>{
-  document.getElementById('menu-toggle').checked = false;
-}));
+// ---------- responsive navigation ----------
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
+function setMenu(open) {
+  navList.classList.toggle('is-open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.textContent = open ? 'FECHAR' : 'MENU';
+}
+menuToggle.addEventListener('click', () => setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
+navLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') { setMenu(false); menuToggle.focus(); } });
+window.matchMedia('(max-width: 900px)').addEventListener('change', () => setMenu(false));
 
-// ---------- whatsapp form ----------
-// Troque o número abaixo pelo seu, no formato DDI+DDD+numero (ex: 5511999999999)
-const WHATSAPP_NUMBER = "SEUNUMEROAQUI";
-
-document.getElementById('contact-form').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('name').value;
-  const message = document.getElementById('message').value;
-  const text = encodeURIComponent(`Olá, meu nome é ${name}.\n${message}`);
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank');
+// ---------- project filters ----------
+const filters = document.querySelector('.project-filters');
+const cards = document.querySelectorAll('.game-card[data-category]');
+filters.hidden = false;
+filters.querySelectorAll('button').forEach(button => {
+  button.addEventListener('click', () => {
+    const selected = button.dataset.filter;
+    filters.querySelectorAll('button').forEach(item => {
+      const active = item === button;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    cards.forEach(card => { card.hidden = selected !== 'all' && !card.dataset.category.split(' ').includes(selected); });
+  });
 });
 
-// ---------- projetos: abas + carrossel ----------
-(function(){
-  const tabs = document.querySelectorAll('.proj-tab');
-  const panels = document.querySelectorAll('.proj-panel');
-  const prev = document.getElementById('car-prev');
-  const next = document.getElementById('car-next');
-  if(!tabs.length || !prev || !next) return;
-
-  const activeTrack = () => document.querySelector('.proj-panel.active .car-track');
-
-  function step(){
-    const track = activeTrack();
-    const card = track.querySelector('.game-card');
-    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-    return card.getBoundingClientRect().width + gap;
-  }
-
-  function updateButtons(){
-    const t = activeTrack();
-    if(!t) return;
-    prev.disabled = t.scrollLeft <= 4;
-    next.disabled = t.scrollLeft + t.clientWidth >= t.scrollWidth - 4;
-  }
-
-  tabs.forEach(tab => tab.addEventListener('click', () => {
-    tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-    panels.forEach(p => p.classList.remove('active'));
-    tab.classList.add('active');
-    tab.setAttribute('aria-selected','true');
-    document.getElementById('panel-' + tab.dataset.cat).classList.add('active');
-    activeTrack().scrollLeft = 0;
-    updateButtons();
-  }));
-
-  prev.addEventListener('click', () => activeTrack().scrollBy({left:-step(), behavior:'smooth'}));
-  next.addEventListener('click', () => activeTrack().scrollBy({left: step(), behavior:'smooth'}));
-
-  document.querySelectorAll('.car-track').forEach(t => t.addEventListener('scroll', updateButtons, {passive:true}));
-  window.addEventListener('resize', updateButtons);
-  updateButtons();
-})();
+// ---------- whatsapp form ----------
+const WHATSAPP_NUMBER = '5511963915049';
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const status = document.getElementById('contact-status');
+  if (!name || !message) { status.textContent = 'Preencha seu nome e sua mensagem.'; return; }
+  const text = encodeURIComponent(`Olá, meu nome é ${name}.\n${message}`);
+  status.textContent = 'Abrindo o WhatsApp para você confirmar o envio.';
+  window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+});

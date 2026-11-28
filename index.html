@@ -3,31 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Filipe Viana — Desenvolvedor Full Stack</title>
-<meta name="description" content="Portfólio de Filipe Gabriel, desenvolvedor Full Stack especializado em Java, Spring Boot, React e JavaScript.">
+<title>Filipe Gabriel — Ciência de Dados &amp; IA | Portfólio</title>
+<meta name="description" content="Portfólio de Filipe Viana, estudante de Ciência da Computação com foco em Ciência de Dados, Python, SQL, Power BI e desenvolvimento Full Stack.">
+<meta name="theme-color" content="#0a0e17">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Filipe Viana — Ciência de Dados &amp; IA">
+<meta property="og:description" content="Projetos, habilidades e trajetória em dados, inteligência artificial e desenvolvimento de software.">
+<meta property="og:url" content="https://filipesep.github.io/portfolio/">
+<link rel="canonical" href="https://filipesep.github.io/portfolio/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png" href="https://filipesep.github.io/portfolio/img/favicon.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<canvas id="starfield"></canvas>
+<canvas id="starfield" aria-hidden="true"></canvas>
 
 <div class="content">
 
 <header>
   <div class="nav-wrap">
     <div class="logo">FILIPE<span>.DEV</span></div>
-    <input type="checkbox" id="menu-toggle">
-    <label class="burger" for="menu-toggle">MENU</label>
-    <nav>
+    <button class="burger" id="menu-toggle" type="button" aria-controls="nav-list" aria-expanded="false">MENU</button>
+    <nav aria-label="Navegação principal">
       <ul id="nav-list">
         <li><a href="#inicio" class="nav-link">Início</a></li>
         <li><a href="#sobre" class="nav-link">Sobre</a></li>
         <li><a href="#habilidades" class="nav-link">Skills</a></li>
         <li><a href="#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="#conquistas" class="nav-link">Badges</a></li>
         <li><a href="#contato" class="nav-link">Contato</a></li>
       </ul>
     </nav>
@@ -40,11 +46,11 @@
     <div class="gameboy">
       <div class="gb-screen">
         <div class="gb-screen-inner">
-          <img src="img/giphy.gif" alt="Animação de tela de jogo retrô">
+          <img src="https://filipesep.github.io/portfolio/img/giphy.gif" alt="Animação de tela de jogo retrô">
         </div>
       </div>
       <div class="gb-row">
-        <span class="gb-brand">FULLSTACK™</span>
+        <span class="gb-brand">DATA SCIENCE™</span>
         <span class="gb-led"></span>
       </div>
       <div class="gb-row">
@@ -53,122 +59,60 @@
       </div>
     </div>
 
-    <h1>FILIPE GABRIEL</h1>
-    <div class="role" id="typed-role">Desenvolvedor Full Stack</div>
+    <h1>FILIPE VIANA</h1>
+    <div class="role" id="typed-role">Ciência de Dados &amp; IA | Full Stack</div>
+    <p class="hero-subtitle">Estudante de Ciência da Computação </p>
+    <span class="availability"><span></span> Buscando estágio em Ciência de Dados</span>
 
-    <a href="#sobre" class="press-start">PRESS START ▸</a>
+    <div class="hero-actions"><a href="#sobre" class="press-start">PRESS START ▸</a><a href="#projetos" class="outline-link">VER PROJETOS ▸</a></div>
   </section>
 
   <section id="sobre">
-    <p class="eyebrow">FICHA DO JOGADOR</p>
+    <h2 class="eyebrow">FICHA DO JOGADOR</h2>
     <div class="panel pixel-border sobre-grid">
-      <div class="terminal-line">whoami</div>
-      <p style="color:var(--star);margin-bottom:1.4rem;">
-        Meu nome é Filipe Gabriel, tenho 21 anos e sou desenvolvedor full stack.
-        Atuo com HTML, CSS, JavaScript, React, Node.js e Java, sempre em busca de
-        soluções eficientes para problemas reais — com a mesma atenção a detalhe
-        que um bom jogo pede na sua fase mais difícil.
-      </p>
-      <div class="terminal-line">cat objetivo.txt</div>
-      <p style="color:var(--star);margin-bottom:1.6rem;">
-        Construir produtos web sólidos, bonitos e que rodem sem travar — do
-        front ao back.
-      </p>
-      <a href="curriculofilipeviana.pdf" class="press-start" style="font-size:.6rem;">⬇ DOWNLOAD CV</a>
+      <div><div class="terminal-line">whoami</div><p>Sou estudante de Ciência da Computação na UNINOVE (conclusão prevista em agosto de 2029), com conhecimentos em Python, SQL, análise de dados e desenvolvimento Full Stack. Tenho interesse em Machine Learning, LLMs, computação em nuvem e mercado financeiro.</p></div>
+      <div><div class="terminal-line">cat objetivo.txt</div><p>Busco uma oportunidade de estágio em Ciência de Dados para transformar dados em insights e construir soluções que conectem análise, inteligência artificial e engenharia de software.</p></div>
+      <div><a href="curriculofilipeviana.pdf" class="press-start cv-link" download>⬇ DOWNLOAD CV</a></div>
     </div>
   </section>
 
   <section id="habilidades">
-    <p class="eyebrow">INVENTÁRIO DE HABILIDADES</p>
-    <div class="cart-grid">
-      <div class="cart"><div class="cart-top"><span class="cart-name">HTML5</span><span class="cart-lv">LV 95</span></div><div class="xp-bar"><div class="xp-fill" style="width:95%"></div></div></div>
-      <div class="cart"><div class="cart-top"><span class="cart-name">CSS3</span><span class="cart-lv">LV 90</span></div><div class="xp-bar"><div class="xp-fill" style="width:90%"></div></div></div>
-      <div class="cart"><div class="cart-top"><span class="cart-name">JAVASCRIPT</span><span class="cart-lv">LV 88</span></div><div class="xp-bar"><div class="xp-fill" style="width:88%"></div></div></div>
-      <div class="cart"><div class="cart-top"><span class="cart-name">REACT</span><span class="cart-lv">LV 82</span></div><div class="xp-bar"><div class="xp-fill" style="width:82%"></div></div></div>
-      <div class="cart"><div class="cart-top"><span class="cart-name">NODE.JS</span><span class="cart-lv">LV 78</span></div><div class="xp-bar"><div class="xp-fill" style="width:78%"></div></div></div>
-      <div class="cart"><div class="cart-top"><span class="cart-name">JAVA</span><span class="cart-lv">LV 85</span></div><div class="xp-bar"><div class="xp-fill" style="width:85%"></div></div></div>
-      <div class="cart"><div class="cart-top"><span class="cart-name">GIT</span><span class="cart-lv">LV 90</span></div><div class="xp-bar"><div class="xp-fill" style="width:90%"></div></div></div>
-    </div>
-  </section>
-
+    <h2 class="eyebrow">INVENTÁRIO DE HABILIDADES</h2>
+    <p class="section-intro">Tecnologias que utilizo e conhecimentos que estou desenvolvendo.</p>
+<div class="skill-group data-group"><h3 class="group-title">01 / DADOS &amp; ANALYTICS</h3><div class="cart-grid"><div class="cart pixel-border"><span class="cart-name">PYTHON</span><p>Pandas, análise exploratória e automação</p></div><div class="cart pixel-border"><span class="cart-name">PANDAS</span><p>Limpeza e transformação de dados</p></div><div class="cart pixel-border"><span class="cart-name">SQL</span><p>JOINs, agregações e subqueries</p></div><div class="cart pixel-border"><span class="cart-name">MYSQL</span><p>Modelagem relacional e consultas</p></div><div class="cart pixel-border"><span class="cart-name">POWER BI</span><p>Dashboards e DAX</p></div><div class="cart pixel-border"><span class="cart-name">EXCEL</span><p>PROCV, tabelas dinâmicas e gráficos</p></div></div></div><div class="skill-group dev-group"><h3 class="group-title">02 / DESENVOLVIMENTO</h3><div class="cart-grid"><div class="cart pixel-border"><span class="cart-name">JAVA</span><p>Programação orientada a objetos</p></div><div class="cart pixel-border"><span class="cart-name">SPRING BOOT</span><p>APIs RESTful</p></div><div class="cart pixel-border"><span class="cart-name">JAVASCRIPT</span><p>Interatividade e consumo de APIs</p></div><div class="cart pixel-border"><span class="cart-name">HTML5 + CSS3</span><p>Interfaces responsivas</p></div><div class="cart pixel-border"><span class="cart-name">REACT</span><p>Fundamentos de interfaces web</p></div><div class="cart pixel-border"><span class="cart-name">NODE.JS</span><p>Fundamentos de back-end</p></div></div></div><div class="skill-group cloud-group"><h3 class="group-title">03 / CLOUD &amp; FERRAMENTAS</h3><div class="cart-grid"><div class="cart pixel-border"><span class="cart-name">GOOGLE CLOUD</span><p>Fundamentos de Data, ML, IA e infraestrutura</p></div><div class="cart pixel-border"><span class="cart-name">GIT + GITHUB</span><p>Controle de versão e colaboração</p></div><div class="cart pixel-border"><span class="cart-name">VS CODE</span><p>Ambiente de desenvolvimento</p></div><div class="cart pixel-border"><span class="cart-name">SCRUM + KANBAN</span><p>Organização e gestão de tarefas</p></div></div></div><div class="panel pixel-border learning-panel"><h3 class="group-title">⚡ PRÓXIMAS HABILIDADES</h3><p>Em estudo ou previstas na minha trilha de aprendizado.</p><div class="tags"><span class="tag">Estatística aplicada</span><span class="tag">NumPy</span><span class="tag">Machine Learning</span><span class="tag">Scikit-learn</span><span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">AWS</span><span class="tag">FastAPI</span><span class="tag">Docker</span></div></div></section>
   <section id="projetos">
-    <p class="eyebrow">SELECIONE SEU JOGO</p>
-
-    <div class="proj-tabs" role="tablist" aria-label="Categorias de projetos">
-      <button class="proj-tab" role="tab" data-cat="dados" aria-selected="false">DADOS</button>
-      <button class="proj-tab" role="tab" data-cat="backend" aria-selected="false">BACK END</button>
-      <button class="proj-tab active" role="tab" data-cat="fullstack" aria-selected="true">FULL STACK</button>
+    <h2 class="eyebrow">SELECIONE SEU JOGO</h2>
+    <p class="section-intro">Projetos publicados e próximas missões na minha trajetória em dados.</p>
+    <div class="project-filters" role="group" aria-label="Filtrar projetos" hidden>
+      <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">TODOS</button>
+      <button type="button" class="filter-btn" data-filter="data" aria-pressed="false">DADOS / IA</button>
+      <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">WEB / FULL STACK</button>
+      <button type="button" class="filter-btn" data-filter="published" aria-pressed="false">PUBLICADOS</button>
     </div>
-
-    <div class="carousel">
-      <button class="car-btn" id="car-prev" aria-label="Projeto anterior">◀</button>
-
-      <div class="proj-panel" id="panel-dados" role="tabpanel">
-        <div class="car-track">
-      <div class="game-card soon">
-        <div class="game-cover"><span class="soon-icon">?</span></div>
-        <div class="game-body">
-          <h3>EM BREVE</h3>
-          <p>Novos projetos de dados chegando por aqui. Fase em construção.</p>
-          <div class="tags"><span class="tag">LOADING...</span></div>
-        </div>
-      </div>
-        </div>
-      </div>
-
-      <div class="proj-panel" id="panel-backend" role="tabpanel">
-        <div class="car-track">
-      <div class="game-card soon">
-        <div class="game-cover"><span class="soon-icon">?</span></div>
-        <div class="game-body">
-          <h3>EM BREVE</h3>
-          <p>Novos projetos de back end chegando por aqui. Fase em construção.</p>
-          <div class="tags"><span class="tag">LOADING...</span></div>
-        </div>
-      </div>
-        </div>
-      </div>
-
-      <div class="proj-panel active" id="panel-fullstack" role="tabpanel">
-        <div class="car-track">
-      <div class="game-card">
-        <div class="game-cover"><img src="img/unipets.png" alt="Captura de tela do projeto E-commerce Petshop" loading="lazy"></div>
-        <div class="game-body">
-          <h3>E-COMMERCE PETSHOP</h3>
-          <p>E-commerce moderno com animações e design responsivo.</p>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Java</span></div>
-          <a class="play-link" href="https://filipesep.github.io/UNI-Pets/" target="_blank" rel="noopener">INSERT CARTRIDGE ▸ JOGAR</a>
-        </div>
-      </div>
-      <div class="game-card">
-        <div class="game-cover"><img src="img/cardapio.png" alt="Captura de tela do projeto Cardápio Digital" loading="lazy"></div>
-        <div class="game-body">
-          <h3>CARDÁPIO DIGITAL</h3>
-          <p>Landing page interativa para restaurante com cardápio dinâmico e responsivo.</p>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-          <a class="play-link" href="https://filipesep.github.io/cardapio/" target="_blank" rel="noopener">INSERT CARTRIDGE ▸ JOGAR</a>
-        </div>
-      </div>
-      <div class="game-card">
-        <div class="game-cover"><img src="img/temporal.png" alt="Captura de tela do projeto Previsão do Tempo" loading="lazy"></div>
-        <div class="game-body">
-          <h3>PREVISÃO DO TEMPO</h3>
-          <p>Aplicação web para visualização da previsão do tempo em diferentes localidades.</p>
-          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
-          <a class="play-link" href="https://filipesep.github.io/temporal/" target="_blank" rel="noopener">INSERT CARTRIDGE ▸ JOGAR</a>
-        </div>
-      </div>
-        </div>
-      </div>
-
-      <button class="car-btn" id="car-next" aria-label="Próximo projeto">▶</button>
-    </div>
-  </section>
+    <div class="game-grid" id="game-grid">
+<article class="game-card pixel-border" data-category="web published">
+  <div class="game-cover"><img src="https://filipesep.github.io/portfolio/img/unipets.png" alt="Captura do projeto UNI-PETS" loading="lazy"></div>
+  <div class="game-body"><span class="project-status">PROJETO PUBLICADO</span><h3>UNI-PETS</h3><p>E-commerce de produtos pet com modelagem relacional, API REST e fluxo de produtos, carrinho e pedidos.</p><div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">REST API</span><span class="tag">JavaScript</span></div>
+  <a class="play-link" href="https://filipesep.github.io/UNI-Pets/" target="_blank" rel="noopener noreferrer">INSERT CARTRIDGE ▸ JOGAR</a>
+  <a class="source-link" href="https://github.com/FilipeSEP/UNI-Pets" target="_blank" rel="noopener noreferrer">&lt;/&gt; CÓDIGO-FONTE ↗</a></div></article><article class="game-card pixel-border" data-category="web published">
+  <div class="game-cover"><img src="https://filipesep.github.io/portfolio/img/cardapio.png" alt="Captura do projeto CORUJINHA PÃES &amp; BOLOS" loading="lazy"></div>
+  <div class="game-body"><span class="project-status">PROJETO PUBLICADO</span><h3>CORUJINHA PÃES &amp; BOLOS</h3><p>Cardápio digital responsivo em uso por um comércio local, com organização de mais de 45 itens e filtros dinâmicos.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+  <a class="play-link" href="https://filipesep.github.io/cardapio/" target="_blank" rel="noopener noreferrer">INSERT CARTRIDGE ▸ JOGAR</a>
+  <a class="source-link" href="https://github.com/FilipeSEP/cardapio" target="_blank" rel="noopener noreferrer">&lt;/&gt; CÓDIGO-FONTE ↗</a></div></article><article class="game-card pixel-border" data-category="web published">
+  <div class="game-cover"><img src="https://filipesep.github.io/portfolio/img/temporal.png" alt="Captura do projeto TEMPORAL" loading="lazy"></div>
+  <div class="game-body"><span class="project-status">PROJETO PUBLICADO</span><h3>TEMPORAL</h3><p>Aplicação de previsão do tempo com consumo e tratamento de dados de API externa, busca por cidade e geolocalização.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">OpenWeather API</span><span class="tag">HTML</span><span class="tag">CSS</span></div>
+  <a class="play-link" href="https://filipesep.github.io/temporal/" target="_blank" rel="noopener noreferrer">INSERT CARTRIDGE ▸ JOGAR</a>
+  <a class="source-link" href="https://github.com/FilipeSEP/temporal" target="_blank" rel="noopener noreferrer">&lt;/&gt; CÓDIGO-FONTE ↗</a></div></article><article class="game-card pixel-border planned-card" data-category="data"><div class="game-cover planned-cover" aria-hidden="true"><span class="planned-icon">▥</span><span class="planned-cover-label">NEXT QUEST</span></div><div class="game-body"><span class="project-status planned-status">PLANEJADO · 01</span><h3>BANKPULSE</h3><p>Análise de reclamações bancárias, indicadores de atendimento e previsão de risco de não resolução.</p><span class="planned-caption">Stack prevista</span><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Machine Learning</span><span class="tag">React</span><span class="tag">FastAPI</span></div><span class="locked-link">▣ AINDA NÃO PUBLICADO</span></div></article><article class="game-card pixel-border planned-card" data-category="data"><div class="game-cover planned-cover" aria-hidden="true"><span class="planned-icon">✦</span><span class="planned-cover-label">NEXT QUEST</span></div><div class="game-body"><span class="project-status planned-status">PLANEJADO · 02</span><h3>FINSIGHT AI</h3><p>Copiloto financeiro com respostas fundamentadas em documentos oficiais e cálculos auditáveis.</p><span class="planned-caption">Stack prevista</span><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">LLMs</span><span class="tag">RAG</span><span class="tag">React</span><span class="tag">FastAPI</span></div><span class="locked-link">▣ AINDA NÃO PUBLICADO</span></div></article><article class="game-card pixel-border planned-card" data-category="data"><div class="game-cover planned-cover" aria-hidden="true"><span class="planned-icon">◇</span><span class="planned-cover-label">NEXT QUEST</span></div><div class="game-body"><span class="project-status planned-status">PLANEJADO · CONDICIONAL</span><h3>CREDITGUARD</h3><p>Motor de risco de crédito e simulador de políticas de aprovação, condicionado à auditoria da base de dados.</p><span class="planned-caption">Stack prevista</span><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">LightGBM</span><span class="tag">Power BI</span><span class="tag">React</span></div><span class="locked-link">▣ AINDA NÃO PUBLICADO</span></div></article></div></section>
+  <section id="conquistas">
+    <h2 class="eyebrow">CONQUISTAS DESBLOQUEADAS</h2>
+    <p class="section-intro">Google Cloud Computing Foundations · 4 badges concluídos em outubro de 2026.</p>
+    <div class="achievement-grid"><article class="achievement pixel-border"><div class="achievement-emblem" aria-hidden="true">✦</div><div><span class="achievement-label">GOOGLE CLOUD · CONCLUÍDO</span><h3>Data, ML, and AI in Google Cloud</h3><p>Fundamentos de dados, Machine Learning e inteligência artificial.</p></div></article><article class="achievement pixel-border"><div class="achievement-emblem" aria-hidden="true">☁</div><div><span class="achievement-label">GOOGLE CLOUD · CONCLUÍDO</span><h3>Cloud Computing Fundamentals</h3><p>Conceitos de computação em nuvem.</p></div></article><article class="achievement pixel-border"><div class="achievement-emblem" aria-hidden="true">▤</div><div><span class="achievement-label">GOOGLE CLOUD · CONCLUÍDO</span><h3>Infrastructure in Google Cloud</h3><p>Fundamentos de infraestrutura em nuvem.</p></div></article><article class="achievement pixel-border"><div class="achievement-emblem" aria-hidden="true">◇</div><div><span class="achievement-label">GOOGLE CLOUD · CONCLUÍDO</span><h3>Networking &amp; Security in Google Cloud</h3><p>Fundamentos de redes e segurança.</p></div></article></div></section>
 
   <section id="contato">
-    <p class="eyebrow">TRANSMISSÃO / CONTATO</p>
+    <h2 class="eyebrow">TRANSMISSÃO / CONTATO</h2>
     <div class="panel pixel-border contact-grid">
       <form id="contact-form">
+        <p class="section-intro">Vamos conversar? Envie uma mensagem pelo WhatsApp.</p>
         <div class="field">
           <label for="name">NOME</label>
           <input type="text" id="name" name="name" placeholder="Seu nome" required>
@@ -178,9 +122,11 @@
           <textarea id="message" name="message" rows="4" placeholder="Sua mensagem" required></textarea>
         </div>
         <button type="submit" class="press-start" style="font-size:.6rem;">ENVIAR WHATSAPP ▸</button>
+      <p id="contact-status" role="status" class="contact-status"></p>
       </form>
 
       <div class="socials">
+        <a class="social-btn" href="https://wa.me/5511963915049" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
         <a class="social-btn" href="https://github.com/filipesep" target="_blank" rel="noopener">GitHub</a>
         <a class="social-btn" href="https://www.linkedin.com/in/filipe-viana-dev" target="_blank" rel="noopener">LinkedIn</a>
       </div>
@@ -190,7 +136,7 @@
 </main>
 
 <footer>
-  <span class="blink-star">✦</span> Filipe Viana. Todos os direitos reservados.
+  <span class="blink-star">✦</span> Filipe Gabriel. Todos os direitos reservados.
 </footer>
 
 </div>
